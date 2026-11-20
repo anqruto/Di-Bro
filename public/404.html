@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DIDAS &amp; BROTHERS — Redirection</title>
+    <script>
+      (function () {
+        var routes = ['/formations', '/conseil', '/le-cabinet', '/contact'];
+        var pathname = window.location.pathname.replace(/\/+$/, '') || '/';
+        var matchedRoute = '';
+        var basePath = pathname;
+
+        for (var i = 0; i < routes.length; i++) {
+          if (pathname === routes[i] || pathname.slice(-routes[i].length) === routes[i]) {
+            matchedRoute = routes[i];
+            basePath = pathname.slice(0, pathname.length - routes[i].length) || '/';
+            break;
+          }
+        }
+
+        if (!basePath.endsWith('/')) {
+          basePath += '/';
+        }
+
+        var target = matchedRoute ? basePath + '#' + matchedRoute : basePath;
+        window.location.replace(target + window.location.search);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

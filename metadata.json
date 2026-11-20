@@ -1,0 +1,6 @@
+{
+  "name": "DIDAS & BROTHERS — Conseils & Formation",
+  "description": "Cabinet français de conseil et de formation professionnelle : prévention & sécurité au travail, management, QVCT, normes ISO et RSE.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
